@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function doSum() {
+
+var a = myfrm.txt1.value
+
+var b= myfrm.txt2.value
+
+var c = parseInt(a) + parseInt(b)
+
+//document.write("Sum is "+c)
+myfrm.ans.value = "Sum is "+ c
+
+
+
+}
+
+</script>
+</head>
+<body>
+    <form id="myfrm">
+
+No1: <input type="text" name="txt1" /> <br />
+
+No2: <input type="text" name="txt2" /> <br />
+
+<input type="button" onclick="doSum()" value="Sum" />
+
+<input type="text" name="ans" readonly disabled/>
+
+</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+  <script>
+        function calculate(op) {
+            var a = parseFloat(document.getElementById("txt1").value);
+            var b = parseFloat(document.getElementById("txt2").value);
+            var result;
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("ans").value = "Enter valid numbers";
+                return;
+            }
+
+            if (op === "+") {
+                result = a + b;
+            } else if (op === "-") {
+                result = a - b;
+            } else if (op === "*") {
+                result = a * b;
+            } else if (op === "/") {
+                if (b === 0) {
+                    document.getElementById("ans").value = "Cannot divide by zero";
+                    return;
+                }
+                result = a / b;
+            }
+
+            document.getElementById("ans").value = "Result is " + result;
+        }
+    </script>
+</head>
+<body>
+    <form id="myfrm">
+        
+
+        <input type="button" onclick="calculate('+')" value="Addition" />
+        <input type="button" onclick="calculate('-')" value="Subtraction" />
+        <input type="button" onclick="calculate('*')" value="Multiplication" />
+        <input type="button" onclick="calculate('/')" value="Division" />
+
+
+        <br /><br />
+        <input type="text" id="ans" readonly />
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <script>
+        function calculate() {
+            var a = parseInt(myfrm.txt1.value);
+            var b = parseInt(myfrm.txt2.value);
+            var op = myfrm.choice.value;
+            var c;
+
+            if (op == "+")
+                c = a + b;
+            else if (op == "-")
+                c = a - b;
+            else if (op == "*")
+                c = a * b;
+            else if (op == "/")
+                c = a / b;
+
+            myfrm.ans.value = "Answer is " + c;
+        }
+    </script>
+</head>
+<body>
+
+<form name="myfrm">
+
+    No1: <input type="text" name="txt1"><br><br>
+
+    No2: <input type="text" name="txt2"><br><br>
+
+    Choice:
+    <select name="choice">
+        <option value="+">Addition</option>
+        <option value="-">Subtraction</option>
+        <option value="*">Multiplication</option>
+        <option value="/">Division</option>
+    </select>
+
+    <br><br>
+
+    <input type="button" value="Get Answer" onclick="calculate()"><br><br>
+
+    <input type="text" name="ans" readonly>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function doadd() {
+
+var a = myfrm.txt1.value
+
+var b= myfrm.txt2.value
+
+var c = parseInt(a) + parseInt(b)
+
+//document.write("Sum is "+c)
+
+myfrm.ans.value = "Sum is "+ c
+
+}
+function dosub() {
+
+var a = myfrm.txt1.value
+
+var b= myfrm.txt2.value
+
+var c = parseInt(a) - parseInt(b)
+
+//document.write("Sum is "+c)
+
+myfrm.ans.value = "sum is "+ c
+
+}
+function domul() {
+
+var a = myfrm.txt1.value
+
+var b= myfrm.txt2.value
+
+var c = parseInt(a) * parseInt(b)
+
+//document.write("Sum is "+c)
+
+myfrm.ans.value = "sum is "+ c
+
+}
+function dodiv() {
+
+var a = myfrm.txt1.value
+
+var b= myfrm.txt2.value
+
+var c = parseInt(a) / parseInt(b)
+
+//document.write("Sum is "+c)
+
+myfrm.ans.value = "sum is "+ c
+
+}
+
+</script>
+</head>
+<body>
+    <form id="myfrm">
+
+No1: <input type="text" name="txt1" /> <br />
+
+No2: <input type="text" name="txt2" /> <br />
+
+<input type="button" onclick="doadd()" value="add" />
+<input type="button" onclick="dosub()" value="sub" />
+<input type="button" onclick="domul()" value="mul" />
+<input type="button" onclick="dodiv()" value="div" /><br/>
+
+
+<input type="text" name="ans" readonly disabled/>
+
+</form>
+</body>
+</html>
